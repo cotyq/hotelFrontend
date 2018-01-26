@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col col-lg-4 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label class="search-label"><span class="icon icon-search"></span> Nombre del hotel</label>
+            <form class="form-inline">
+              <input type="search"
+                     class="form-control"
+                     placeholder="Ingrese el nombre del hotel"
+                     [(ngModel)]="filter.name"
+                     name="searchField">
+              <button class="btn btn-search" (click)="getHotels()">Buscar</button>
+            </form>
+          </div>
+          <div class="form-group">
+            <label class="search-label"><span class="icon icon-star"></span> Estrellas</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="starsRadio" value="" [checked]="!filter.stars.length"
+                     (change)="onStarsSelectAll()">
+              <label class="form-check-label">
+                Todas las estrellas
+              </label>
+            </div>
+          </div>
+          <div class="form-group"  *ngFor="let stars of [1,2,3,4,5]">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="starsRadio" value="{{stars}}"
+                     (change)="onStarsSelectionChange(stars)" [checked]="isSelected(stars)">
+              <app-stars [stars]="stars"></app-stars>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <app-hotels-list class="col col-lg-8 col-md-12 col-sm-12" [hotels]="hotels"></app-hotels-list>
+</div>

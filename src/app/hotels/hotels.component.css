@@ -1,0 +1,29 @@
+
+.icon {
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  vertical-align: middle;
+  font-size: 48px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-search {
+  background-image: url('../../assets/icons/filters/search.svg');
+}
+
+.icon-star {
+  background-image: url('../../assets/icons/filters/star.svg');
+}
+
+.search-label {
+  color: blue;
+  font-weight: 600;
+}
+
+.btn-search {
+  color: white;
+  background-color: darkblue;
+}

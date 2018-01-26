@@ -1,0 +1,37 @@
+.hotel-image {
+  background-size: cover;
+}
+
+.icon {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  vertical-align: middle;
+  font-size: 48px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 5px;
+}
+
+.hotel-title {
+  color: darkblue;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.hotel-price-label {
+  color: orange;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.hotel-price {
+  color: orange;
+  font-size: 32px;
+}
+
+.btn-hotel-view {
+  color: white;
+  background-color: darkblue;
+}

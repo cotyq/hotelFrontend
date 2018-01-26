@@ -1,0 +1,24 @@
+<div class="card"  *ngFor="let hotel of hotels">
+  <div class="card-body">
+    <div class="row">
+      <div class="col hotel-image">
+        <img src="{{'../assets/images/hotels/' + hotel.image }}">
+      </div>
+      <div class="col">
+        <p class="hotel-title">{{ hotel.name }}</p>
+        <app-stars [stars]="hotel.stars"></app-stars>
+        <p><span *ngFor="let amenitie of hotel.amenities" class="icon"
+                 [ngStyle]="{'background-image': 'url(../../assets/icons/amenities/' + amenitie + '.svg)'}"></span>
+        </p>
+      </div>
+      <div class="col">
+        <p>Precio por noche por habitación</p>
+        <p class="hotel-price-label">ARS <span class="hotel-price">{{ hotel.price }}</span></p>
+        <button class="btn btn-hotel-view">Ver hotel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!hotels?.length">
+  <p>No se encontraron hoteles con el criterio ingresado.</p>
+</div>
