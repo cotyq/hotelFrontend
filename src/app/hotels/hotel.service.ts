@@ -13,7 +13,6 @@ export class HotelService {
 
   getHotels(filter = new Filter()): Observable<Hotel[]> {
     let params = new HttpParams();
-    console.log(filter);
     if(filter.name) params = params.set('name', filter.name);
     if(filter.stars) params = params.set('stars', filter.stars.toString());
     return this.http.get<Hotel[]>(this.hotelsUrl, { params: params});
