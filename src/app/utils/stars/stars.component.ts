@@ -14,7 +14,7 @@ export class StarsComponent implements OnInit {
   ngOnInit() {
   }
 
-  getRepetitions(n: number): Array<number> {
+  getRepetitions(n: number): number[] {
     return new Array(n);
   }
 

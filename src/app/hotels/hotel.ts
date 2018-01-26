@@ -4,5 +4,5 @@ export class Hotel {
   stars: number;
   price: number;
   image: string;
-  amenities: Array<string>;
+  amenities: string[];
 }

@@ -34,10 +34,8 @@ export class HotelsComponent implements OnInit {
     this.getHotels();
   }
 
-  isSelected(selected: number): boolean {
-    return !!_.find(this.filter.stars, function (stars) {
-      return stars == selected;
-    });
+  isSelected(stars: number): boolean {
+    return this.filter.stars.indexOf(stars) >= 0;
   }
 
   getHotels(): void {
